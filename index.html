@@ -1,28 +1,266 @@
 <!doctype html>
-<html lang="it">
+<html lang="en">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Nome progetto</title>
+  <title>Coming Soon | Official Site Placeholder</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;700&amp;family=Montserrat:wght@400;500;600&amp;display=swap" rel="stylesheet" />
   <style>
-    body { font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial; margin: 0; }
-    .wrap { max-width: 760px; margin: 0 auto; padding: 64px 20px; }
-    h1 { margin: 0 0 12px; font-size: 40px; }
-    p { margin: 0 0 18px; font-size: 18px; line-height: 1.5; color: #444; }
-    a { color: #2563eb; text-decoration: none; }
-    a:hover { text-decoration: underline; }
-    .card { margin-top: 28px; padding: 18px; border: 1px solid #e5e7eb; border-radius: 14px; }
+    :root {
+      --bg-base: #111015;
+      --bg-top: #2a2130;
+      --surface: rgba(22, 20, 28, 0.78);
+      --surface-strong: rgba(17, 15, 22, 0.9);
+      --text-main: #f9f4ea;
+      --text-muted: #d7cdbb;
+      --accent: #d7a861;
+      --accent-soft: rgba(215, 168, 97, 0.2);
+      --line: rgba(255, 255, 255, 0.14);
+      --radius: 18px;
+      --container: 960px;
+      --shadow: 0 22px 54px rgba(0, 0, 0, 0.38);
+      --font-title: "Cormorant Garamond", serif;
+      --font-body: "Montserrat", sans-serif;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html,
+    body {
+      margin: 0;
+      min-height: 100%;
+    }
+
+    body {
+      font-family: var(--font-body);
+      color: var(--text-main);
+      background:
+        radial-gradient(circle at 12% 16%, rgba(215, 168, 97, 0.2), transparent 38%),
+        radial-gradient(circle at 88% 10%, rgba(173, 93, 66, 0.26), transparent 42%),
+        linear-gradient(170deg, var(--bg-top), var(--bg-base) 46%);
+      line-height: 1.6;
+    }
+
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      background-image: repeating-linear-gradient(
+        120deg,
+        rgba(255, 255, 255, 0.03) 0,
+        rgba(255, 255, 255, 0.03) 1px,
+        transparent 1px,
+        transparent 34px
+      );
+      opacity: 0.32;
+      z-index: -1;
+    }
+
+    .page {
+      width: min(100% - 2rem, var(--container));
+      margin: 0 auto;
+      padding: 2rem 0 3rem;
+    }
+
+    .site-tag {
+      margin: 0;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      font-size: 0.78rem;
+      color: var(--text-muted);
+      text-align: center;
+    }
+
+    .hero {
+      margin-top: 2rem;
+      padding: clamp(2.1rem, 5vw, 3.8rem);
+      border-radius: 26px;
+      background: linear-gradient(130deg, var(--surface), var(--surface-strong));
+      border: 1px solid var(--line);
+      box-shadow: var(--shadow);
+      position: relative;
+      overflow: hidden;
+      display: grid;
+      justify-items: center;
+      text-align: center;
+      gap: 0.2rem;
+    }
+
+    .hero::after {
+      content: "";
+      position: absolute;
+      width: 280px;
+      height: 280px;
+      right: -90px;
+      top: -120px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(215, 168, 97, 0.42), rgba(215, 168, 97, 0));
+      filter: blur(10px);
+    }
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      inset: auto 50% 1.1rem;
+      width: min(140px, 40vw);
+      height: 1px;
+      transform: translateX(-50%);
+      background: linear-gradient(90deg, transparent, rgba(215, 168, 97, 0.85), transparent);
+      opacity: 0.85;
+    }
+
+    .eyebrow {
+      margin: 0 0 0.5rem;
+      color: var(--accent);
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      font-size: 0.75rem;
+      font-weight: 600;
+      position: relative;
+      z-index: 1;
+    }
+
+    h1 {
+      margin: 0;
+      font-family: var(--font-title);
+      font-size: clamp(2.2rem, 6.4vw, 4.1rem);
+      line-height: 1.04;
+      font-weight: 700;
+      max-width: 18ch;
+      position: relative;
+      z-index: 1;
+      text-wrap: balance;
+    }
+
+    .hero-copy {
+      margin: 1rem 0 0;
+      max-width: 52ch;
+      color: var(--text-muted);
+      position: relative;
+      z-index: 1;
+      text-wrap: pretty;
+    }
+
+    .sections {
+      margin-top: 1.4rem;
+      display: grid;
+      gap: 1rem;
+      grid-template-columns: 1fr;
+      max-width: 560px;
+    }
+
+    .panel {
+      background: rgba(20, 18, 26, 0.84);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      padding: 1.25rem;
+      box-shadow: 0 16px 36px rgba(0, 0, 0, 0.32);
+    }
+
+    h2 {
+      margin: 0 0 0.55rem;
+      font-family: var(--font-title);
+      font-size: clamp(1.3rem, 2.8vw, 1.9rem);
+    }
+
+    .panel p {
+      margin: 0;
+      color: var(--text-muted);
+      font-size: 0.95rem;
+    }
+
+    .contact-link {
+      display: inline-block;
+      margin-top: 0.8rem;
+      color: var(--text-main);
+      text-decoration: none;
+      border-bottom: 1px solid var(--accent-soft);
+      padding-bottom: 0.15rem;
+      transition: border-color 0.2s ease, color 0.2s ease;
+      word-break: break-word;
+    }
+
+    .contact-link:hover {
+      color: #ffe5bf;
+      border-color: var(--accent);
+    }
+
+    .ad-slot {
+      margin-top: 0.75rem;
+      border: 1px dashed rgba(215, 168, 97, 0.55);
+      border-radius: 14px;
+      min-height: 138px;
+      display: grid;
+      place-content: center;
+      text-align: center;
+      padding: 1rem;
+      background: rgba(215, 168, 97, 0.08);
+    }
+
+    .ad-slot strong {
+      font-size: 0.9rem;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: #ffe0b1;
+    }
+
+    .ad-slot span {
+      margin-top: 0.3rem;
+      color: var(--text-muted);
+      font-size: 0.85rem;
+    }
+
+    footer {
+      margin-top: 1rem;
+      text-align: center;
+      font-size: 0.8rem;
+      color: rgba(250, 236, 205, 0.68);
+    }
+
+    @media (max-width: 760px) {
+      .page {
+        width: min(100% - 1.4rem, var(--container));
+      }
+
+      .sections {
+        grid-template-columns: 1fr;
+      }
+    }
   </style>
 </head>
 <body>
-  <div class="wrap">
-    <h1>Work in progress</h1>
-    <p>Stay tuned for updates!</p>
+  <div class="page">
+    <p class="site-tag">Official Website</p>
+    <section class="hero" aria-labelledby="main-title">
+      <p class="eyebrow">Coming Soon</p>
+      <h1 id="main-title">Official site placeholder</h1>
+      <p class="hero-copy">The official website is currently in progress. Please check back soon for updates and new content.</p>
+    </section>
 
-    <div class="card">
-      <p><strong>Contatti</strong></p>
-      <p>Email: <a href="mailto:amministrazione@mafesitech.com">amministrazione@mafesitech.com</a></p>
-    </div>
+    <section class="sections">
+      <article class="panel" id="contact">
+        <h2>Contact</h2>
+        <p>For inquiries and communications:</p>
+        <a class="contact-link" href="mailto:amministrazione@mafesitech.com">amministrazione@mafesitech.com</a>
+      </article>
+
+      <article class="panel" aria-label="Google Ads placeholder" hidden>
+        <h2>Advertising</h2>
+        <p>Reserved space for future Google Ads integration.</p>
+        <div class="ad-slot" id="google-ads-slot">
+          <strong>Google Ads Placeholder</strong>
+          <span>Insert your ad snippet here when available.</span>
+        </div>
+        <!-- Future Google Ads script slot -->
+      </article>
+    </section>
+
+    <footer>Placeholder page</footer>
   </div>
 </body>
 </html>
