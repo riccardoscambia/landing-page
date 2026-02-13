@@ -3,10 +3,69 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Coming Soon | Official Site Placeholder</title>
+  <title>KhloeGrace.com | Official Website Coming Soon</title>
+  <meta name="description" content="KhloeGrace.com is preparing its official website. Stay tuned for updates, announcements, and new content." />
+  <meta name="robots" content="index,follow,max-snippet:-1,max-image-preview:large,max-video-preview:-1" />
+  <meta name="googlebot" content="index,follow,max-snippet:-1,max-image-preview:large,max-video-preview:-1" />
+  <meta name="author" content="Mafesi Tech Srls" />
+  <meta name="theme-color" content="#111015" />
+  <link rel="canonical" href="https://khloegrace.com/" />
+  <link rel="alternate" hreflang="en-US" href="https://khloegrace.com/" />
+  <link rel="alternate" hreflang="x-default" href="https://khloegrace.com/" />
+  <meta property="og:locale" content="en_US" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="KhloeGrace.com" />
+  <meta property="og:title" content="KhloeGrace.com | Official Website Coming Soon" />
+  <meta property="og:description" content="KhloeGrace.com is preparing its official website. Stay tuned for updates, announcements, and new content." />
+  <meta property="og:url" content="https://khloegrace.com/" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="KhloeGrace.com | Official Website Coming Soon" />
+  <meta name="twitter:description" content="KhloeGrace.com is preparing its official website. Stay tuned for updates, announcements, and new content." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;700&amp;family=Montserrat:wght@400;500;600&amp;display=swap" rel="stylesheet" />
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Organization",
+          "@id": "https://khloegrace.com/#organization",
+          "name": "Mafesi Tech Srls",
+          "url": "https://khloegrace.com/",
+          "email": "amministrazione@mafesitech.com",
+          "taxID": "IT12871260019",
+          "address": {
+            "@type": "PostalAddress",
+            "addressCountry": "IT"
+          }
+        },
+        {
+          "@type": "WebSite",
+          "@id": "https://khloegrace.com/#website",
+          "url": "https://khloegrace.com/",
+          "name": "KhloeGrace.com",
+          "inLanguage": "en-US",
+          "publisher": {
+            "@id": "https://khloegrace.com/#organization"
+          }
+        },
+        {
+          "@type": "WebPage",
+          "@id": "https://khloegrace.com/#webpage",
+          "url": "https://khloegrace.com/",
+          "name": "KhloeGrace.com | Official Website Coming Soon",
+          "description": "KhloeGrace.com is preparing its official website. Stay tuned for updates, announcements, and new content.",
+          "isPartOf": {
+            "@id": "https://khloegrace.com/#website"
+          },
+          "about": {
+            "@id": "https://khloegrace.com/#organization"
+          }
+        }
+      ]
+    }
+  </script>
   <style>
     :root {
       --bg-base: #111015;
@@ -394,23 +453,28 @@
       }
     }
   </style>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-ES26YFY05Z"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag("js", new Date());
+    gtag("consent", "default", {
+      ad_storage: "denied",
+      analytics_storage: "denied",
+      ad_user_data: "denied",
+      ad_personalization: "denied"
+    });
+    gtag("config", "G-ES26YFY05Z", { anonymize_ip: true });
+  </script>
 </head>
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-ES26YFY05Z"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-ES26YFY05Z');
-</script>
 <body>
   <div class="page">
-    <p class="site-tag">Official Website</p>
+    <p class="site-tag">KhloeGrace.com</p>
     <section class="hero" aria-labelledby="main-title">
       <p class="eyebrow">Coming Soon</p>
-      <h1 id="main-title">Official site placeholder</h1>
-      <p class="hero-copy">The official website is currently in progress. Please check back soon for updates and new content.</p>
+      <h1 id="main-title">Official website coming soon</h1>
+      <p class="hero-copy">KhloeGrace.com is currently being built. Please check back soon for launches, updates, and new content.</p>
     </section>
 
     <section class="sections">
@@ -468,55 +532,51 @@
     </div>
 
     <script>
-      // Cookie Consent Management
+      // Cookie consent management
       const cookieConsent = document.getElementById('cookieConsent');
       const cookieAccept = document.getElementById('cookieAccept');
       const cookieReject = document.getElementById('cookieReject');
+      const consentMeasurementId = 'G-ES26YFY05Z';
+      const gaDisableKey = `ga-disable-${consentMeasurementId}`;
 
-      // Check if user has already made a choice
-      function initCookieConsent() {
-        const consentStatus = localStorage.getItem('cookieConsent');
-        
-        // Show banner only if no prior consent
-        if (!consentStatus) {
-          cookieConsent.classList.add('show');
-        } else if (consentStatus === 'accepted') {
-          // Analytics are already enabled in gtag.js
-        } else if (consentStatus === 'rejected') {
-          // User rejected cookies
-          window['ga-disable-G-ES26YFY05Z'] = true;
-        }
+      function updateAnalyticsConsent(granted) {
+        window[gaDisableKey] = !granted;
+        gtag('consent', 'update', {
+          ad_storage: granted ? 'granted' : 'denied',
+          analytics_storage: granted ? 'granted' : 'denied',
+          ad_user_data: granted ? 'granted' : 'denied',
+          ad_personalization: granted ? 'granted' : 'denied'
+        });
       }
 
-      // Accept cookies
+      function initCookieConsent() {
+        const consentStatus = localStorage.getItem('cookieConsent');
+
+        if (!consentStatus) {
+          cookieConsent.classList.add('show');
+          updateAnalyticsConsent(false);
+          return;
+        }
+
+        updateAnalyticsConsent(consentStatus === 'accepted');
+      }
+
       cookieAccept.addEventListener('click', function() {
         localStorage.setItem('cookieConsent', 'accepted');
         cookieConsent.classList.remove('show');
-        // Enable Google Analytics if it was disabled
-        window['ga-disable-G-ES26YFY05Z'] = false;
-        // Track accept event
+        updateAnalyticsConsent(true);
         gtag('event', 'cookie_consent', {
           'consent_type': 'all',
           'status': 'accepted'
         });
       });
 
-      // Reject cookies
       cookieReject.addEventListener('click', function() {
-        // Track reject event BEFORE disabling analytics
-        gtag('event', 'cookie_consent', {
-          'consent_type': 'all',
-          'status': 'rejected'
-        });
         localStorage.setItem('cookieConsent', 'rejected');
         cookieConsent.classList.remove('show');
-        // Disable Google Analytics
-        window['ga-disable-G-ES26YFY05Z'] = true;
+        updateAnalyticsConsent(false);
       });
 
-      // Initialize on page load
-      document.addEventListener('DOMContentLoaded', initCookieConsent);
-      // Also run immediately in case DOM is already loaded
       if (document.readyState === 'loading') {
         document.addEventListener('DOMContentLoaded', initCookieConsent);
       } else {
