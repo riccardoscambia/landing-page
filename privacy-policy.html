@@ -1,0 +1,296 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Privacy Policy</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;700&amp;family=Montserrat:wght@400;500;600&amp;display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --bg-base: #111015;
+      --bg-top: #2a2130;
+      --surface: rgba(22, 20, 28, 0.78);
+      --surface-strong: rgba(17, 15, 22, 0.9);
+      --text-main: #f9f4ea;
+      --text-muted: #d7cdbb;
+      --accent: #d7a861;
+      --accent-soft: rgba(215, 168, 97, 0.2);
+      --line: rgba(255, 255, 255, 0.14);
+      --radius: 18px;
+      --container: 960px;
+      --shadow: 0 22px 54px rgba(0, 0, 0, 0.38);
+      --font-title: "Cormorant Garamond", serif;
+      --font-body: "Montserrat", sans-serif;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html,
+    body {
+      margin: 0;
+      min-height: 100%;
+    }
+
+    body {
+      font-family: var(--font-body);
+      color: var(--text-main);
+      background:
+        radial-gradient(circle at 12% 16%, rgba(215, 168, 97, 0.2), transparent 38%),
+        radial-gradient(circle at 88% 10%, rgba(173, 93, 66, 0.26), transparent 42%),
+        linear-gradient(170deg, var(--bg-top), var(--bg-base) 46%);
+      line-height: 1.6;
+    }
+
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      background-image: repeating-linear-gradient(
+        120deg,
+        rgba(255, 255, 255, 0.03) 0,
+        rgba(255, 255, 255, 0.03) 1px,
+        transparent 1px,
+        transparent 34px
+      );
+      opacity: 0.32;
+      z-index: -1;
+    }
+
+    .page {
+      width: min(100% - 2rem, var(--container));
+      margin: 0 auto;
+      padding: 2rem 0 3rem;
+    }
+
+    .header {
+      margin-bottom: 2rem;
+      padding-bottom: 2rem;
+      border-bottom: 1px solid var(--line);
+    }
+
+    h1 {
+      margin: 0 0 0.5rem;
+      font-family: var(--font-title);
+      font-size: clamp(2.2rem, 6.4vw, 3.5rem);
+      line-height: 1.04;
+      font-weight: 700;
+      color: var(--text-main);
+    }
+
+    .last-updated {
+      margin: 0;
+      font-size: 0.9rem;
+      color: var(--text-muted);
+    }
+
+    h2 {
+      margin: 2rem 0 1rem;
+      font-family: var(--font-title);
+      font-size: clamp(1.4rem, 2.8vw, 1.8rem);
+      color: var(--accent);
+      border-bottom: 1px solid var(--accent-soft);
+      padding-bottom: 0.5rem;
+    }
+
+    h3 {
+      margin: 1.5rem 0 0.75rem;
+      font-family: var(--font-body);
+      font-size: 1.1rem;
+      color: var(--text-main);
+      font-weight: 600;
+    }
+
+    p {
+      margin: 0.75rem 0;
+      color: var(--text-muted);
+      line-height: 1.8;
+    }
+
+    ul,
+    ol {
+      margin: 0.75rem 0;
+      padding-left: 1.5rem;
+      color: var(--text-muted);
+    }
+
+    li {
+      margin: 0.5rem 0;
+      line-height: 1.8;
+    }
+
+    a {
+      color: var(--accent);
+      text-decoration: none;
+      border-bottom: 1px solid var(--accent-soft);
+      padding-bottom: 0.15rem;
+      transition: color 0.2s ease, border-color 0.2s ease;
+    }
+
+    a:hover {
+      color: #ffe5bf;
+      border-color: var(--accent);
+    }
+
+    .back-link {
+      display: inline-block;
+      margin-bottom: 1.5rem;
+      font-size: 0.9rem;
+    }
+
+    footer {
+      margin-top: 3rem;
+      padding-top: 2rem;
+      border-top: 1px solid var(--line);
+      text-align: center;
+      font-size: 0.8rem;
+      color: rgba(250, 236, 205, 0.68);
+    }
+
+    @media (max-width: 760px) {
+      .page {
+        width: min(100% - 1.4rem, var(--container));
+      }
+
+      h1 {
+        font-size: 2rem;
+      }
+
+      h2 {
+        font-size: 1.3rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <a href="index.html" class="back-link">← Back to Home</a>
+
+    <div class="header">
+      <h1>Privacy Policy</h1>
+      <p class="last-updated">Last Updated: February 13, 2026</p>
+    </div>
+
+    <h2>1. Introduction</h2>
+    <p>Welcome to our Privacy Policy. This policy explains how we collect, use, disclose, and otherwise process personal information in connection with our website and services. We are committed to protecting your privacy and ensuring you have a positive experience on our website.</p>
+
+    <h2>2. Information We Collect</h2>
+    <h3>2.1 Information You Provide Directly</h3>
+    <ul>
+      <li>Contact information (email address, name) when you communicate with us</li>
+      <li>Any other information you voluntarily provide through contact forms or inquiries</li>
+    </ul>
+
+    <h3>2.2 Information Collected Automatically</h3>
+    <ul>
+      <li>Analytics data through Google Analytics (IP address, device type, browser information, pages visited)</li>
+      <li>Session cookies and technology data</li>
+      <li>Information about your interaction with our website</li>
+    </ul>
+
+    <h2>3. How We Use Your Information</h2>
+    <p>We use the information we collect for the following purposes:</p>
+    <ul>
+      <li>Responding to your inquiries and communications</li>
+      <li>Analyzing website usage through Google Analytics to improve our services</li>
+      <li>Maintaining and improving our website functionality</li>
+      <li>Understanding user preferences and behavior</li>
+      <li>Complying with legal obligations</li>
+    </ul>
+
+    <h2>4. Cookies and Tracking Technologies</h2>
+    <p>Our website uses cookies and similar tracking technologies, including Google Analytics. For detailed information about how we use cookies, please see our <a href="cookie-policy.html">Cookie Policy</a>.</p>
+
+    <h2>5. Third-Party Services</h2>
+    <h3>5.1 Google Analytics</h3>
+    <p>We use Google Analytics to analyze website traffic and user behavior. Google Analytics collects information such as:</p>
+    <ul>
+      <li>Pages you visit</li>
+      <li>Time spent on pages</li>
+      <li>Click patterns</li>
+      <li>Your geographic location</li>
+      <li>Device and browser information</li>
+    </ul>
+    <p>For more information about how Google uses data, please visit <a href="https://policies.google.com/privacy" target="_blank">Google's Privacy Policy</a> and <a href="https://support.google.com/analytics/answer/6004245" target="_blank">Google Analytics Cookie Usage</a>.</p>
+
+    <h3>5.2 Other Third Parties</h3>
+    <p>We may use other third-party services to enhance your experience. These services may collect information as outlined in their respective privacy policies.</p>
+
+    <h2>6. Data Retention</h2>
+    <p>We retain personal information only for as long as necessary to fulfill the purposes outlined in this policy, unless a longer retention period is required by law. Analytics data is typically retained according to Google Analytics default settings (26 months).</p>
+
+    <h2>7. Data Security</h2>
+    <p>We implement appropriate technical and organizational measures designed to protect personal information against unauthorized access, alteration, disclosure, or destruction. However, no method of transmission over the Internet is 100% secure.</p>
+
+    <h2>8. Your Rights</h2>
+    <p>Depending on your location, you may have the following rights:</p>
+    <ul>
+      <li>Right to access your personal information</li>
+      <li>Right to rectification of inaccurate information</li>
+      <li>Right to erasure ("right to be forgotten")</li>
+      <li>Right to restrict processing</li>
+      <li>Right to data portability</li>
+      <li>Right to object to processing</li>
+      <li>Right to withdraw consent at any time</li>
+    </ul>
+    <p>To exercise any of these rights, please contact us at <a href="mailto:amministrazione@mafesitech.com">amministrazione@mafesitech.com</a>.</p>
+
+    <h2>9. EU/GDPR Compliance</h2>
+    <p>If you are located in the European Union, your data processing is governed by the General Data Protection Regulation (GDPR). We process data only with valid legal bases, which include:</p>
+    <ul>
+      <li>Your explicit consent</li>
+      <li>Performance of a contract</li>
+      <li>Compliance with legal obligations</li>
+      <li>Protection of vital interests</li>
+      <li>Performance of a public task</li>
+      <li>Legitimate interests</li>
+    </ul>
+
+    <h2>10. California Privacy Rights (CCPA)</h2>
+    <p>California residents have specific rights under the California Consumer Privacy Act (CCPA), including the right to know, delete, and opt-out of the sale or sharing of personal information. To exercise these rights, please contact us at <a href="mailto:amministrazione@mafesitech.com">amministrazione@mafesitech.com</a>.</p>
+
+    <h2>11. Children's Privacy</h2>
+    <p>Our website is not intended for children under the age of 13 (or the applicable age of digital consent in your jurisdiction). We do not knowingly collect personal information from children. If we learn that we have collected personal information from a child without parental consent, we will delete such information promptly.</p>
+
+    <h2>12. Changes to This Policy</h2>
+    <p>We may update this Privacy Policy from time to time to reflect changes in our practices, technology, applicable laws, or other factors. Your continued use of our website after changes are posted constitutes your acceptance of the updated Privacy Policy.</p>
+
+    <h2>13. Contact Us</h2>
+    <p>If you have questions or concerns about this Privacy Policy or our privacy practices, please contact us at:</p>
+    <p>
+      Email: <a href="mailto:amministrazione@mafesitech.com">amministrazione@mafesitech.com</a>
+    </p>
+
+    <h2>14. Complaint Rights</h2>
+    <p>If you believe your privacy rights have been violated, you have the right to lodge a complaint with the relevant data protection authority in your jurisdiction.</p>
+
+    <footer>
+      <div class="footer-content" style="grid-template-columns: 1fr 1fr 1fr; gap: 2rem; margin-bottom: 2rem; padding: 0 1rem; text-align: center;">
+        <div class="footer-section">
+          <h4 style="margin: 0 0 1rem; font-family: var(--font-title); font-size: 1.1rem; color: var(--accent); font-weight: 600;">Company</h4>
+          <p style="margin: 0.5rem 0; font-size: 0.85rem; color: var(--text-muted);"><strong>Mafesi Tech Srls</strong></p>
+          <p style="margin: 0.5rem 0; font-size: 0.85rem; color: var(--text-muted);">P. IVA: 12871260019</p>
+          <p style="margin: 0.5rem 0; font-size: 0.85rem; color: var(--text-muted);">Italy</p>
+          <p style="margin: 0.5rem 0;"><a href="https://www.mafesitech.com" target="_blank" style="font-size: 0.85rem;">www.mafesitech.com</a></p>
+        </div>
+        <div class="footer-section">
+          <h4 style="margin: 0 0 1rem; font-family: var(--font-title); font-size: 1.1rem; color: var(--accent); font-weight: 600;">Contact</h4>
+          <p style="margin: 0.5rem 0;"><a href="mailto:amministrazione@mafesitech.com" style="font-size: 0.85rem;">amministrazione@mafesitech.com</a></p>
+        </div>
+        <div class="footer-section">
+          <h4 style="margin: 0 0 1rem; font-family: var(--font-title); font-size: 1.1rem; color: var(--accent); font-weight: 600;">Legal</h4>
+          <p style="margin: 0.5rem 0;"><a href="privacy-policy.html" style="font-size: 0.85rem;">Privacy Policy</a></p>
+          <p style="margin: 0.5rem 0;"><a href="cookie-policy.html" style="font-size: 0.85rem;">Cookie Policy</a></p>
+        </div>
+      </div>
+      <div style="padding-top: 1.5rem; border-top: 1px solid var(--line); text-align: center; font-size: 0.8rem; color: rgba(250, 236, 205, 0.68);">
+        <p>&copy; 2026 Mafesi Tech Srls. All rights reserved.</p>
+      </div>
+    </footer>
+  </div>
+</body>
+</html>

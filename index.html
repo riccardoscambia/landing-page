@@ -216,10 +216,172 @@
     }
 
     footer {
-      margin-top: 1rem;
+      margin-top: 4rem;
+      padding-top: 2.5rem;
+      border-top: 1px solid var(--line);
+    }
+
+    .footer-content {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 2rem;
+      margin-bottom: 2rem;
+      padding: 0 1rem;
+      text-align: center;
+    }
+
+    .footer-section h3 {
+      margin: 0 0 1rem;
+      font-family: var(--font-title);
+      font-size: 1.1rem;
+      color: var(--accent);
+      font-weight: 600;
+    }
+
+    .footer-section p {
+      margin: 0.5rem 0;
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      line-height: 1.6;
+    }
+
+    .footer-section a {
+      color: var(--text-main);
+      text-decoration: none;
+      border-bottom: 1px solid var(--accent-soft);
+      padding-bottom: 0.15rem;
+      font-size: 0.85rem;
+      transition: color 0.2s ease, border-color 0.2s ease;
+    }
+
+    .footer-section a:hover {
+      color: #ffe5bf;
+      border-color: var(--accent);
+    }
+
+    .footer-bottom {
+      padding-top: 1.5rem;
+      border-top: 1px solid var(--line);
       text-align: center;
       font-size: 0.8rem;
       color: rgba(250, 236, 205, 0.68);
+    }
+
+    /* Cookie Consent Banner */
+    .cookie-consent {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: linear-gradient(135deg, var(--surface), var(--surface-strong));
+      border-top: 2px solid var(--accent);
+      border-radius: 0;
+      padding: 1.5rem 2rem;
+      box-shadow: 0 -8px 32px rgba(0, 0, 0, 0.5);
+      z-index: 1000;
+      display: none;
+      animation: slideUp 0.4s ease-out;
+    }
+
+    .cookie-consent.show {
+      display: grid;
+      grid-template-columns: 1fr auto auto;
+      gap: 1.5rem;
+      align-items: center;
+    }
+
+    @keyframes slideUp {
+      from {
+        transform: translateY(100%);
+        opacity: 0;
+      }
+      to {
+        transform: translateY(0);
+        opacity: 1;
+      }
+    }
+
+    .cookie-message {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      line-height: 1.5;
+    }
+
+    .cookie-message strong {
+      color: var(--text-main);
+    }
+
+    .cookie-message a {
+      color: var(--accent);
+      text-decoration: none;
+      border-bottom: 1px solid var(--accent-soft);
+      padding-bottom: 0.15rem;
+      transition: color 0.2s ease;
+    }
+
+    .cookie-message a:hover {
+      color: #ffe5bf;
+    }
+
+    .cookie-buttons {
+      display: flex;
+      gap: 1rem;
+      align-items: center;
+    }
+
+    .cookie-btn {
+      padding: 0.6rem 1.4rem;
+      border: none;
+      border-radius: 8px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      font-family: var(--font-body);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    .cookie-btn-reject {
+      background: transparent;
+      color: var(--text-muted);
+      border: 1px solid var(--line);
+    }
+
+    .cookie-btn-reject:hover {
+      border-color: var(--text-main);
+      color: var(--text-main);
+    }
+
+    .cookie-btn-accept {
+      background: var(--accent);
+      color: var(--bg-base);
+    }
+
+    .cookie-btn-accept:hover {
+      background: #ffe5bf;
+      transform: translateY(-2px);
+      box-shadow: 0 8px 16px rgba(215, 168, 97, 0.3);
+    }
+
+    @media (max-width: 760px) {
+      .footer-content {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+      }
+
+      .cookie-consent.show {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+      }
+
+      .cookie-buttons {
+        width: 100%;
+      }
+
+      .cookie-btn {
+        flex: 1;
+      }
     }
 
     @media (max-width: 760px) {
@@ -269,7 +431,98 @@
       </article>
     </section>
 
-    <footer>Placeholder page</footer>
+    <footer>
+      <div class="footer-content">
+        <div class="footer-section">
+          <h3>Company</h3>
+          <p><strong>Mafesi Tech Srls</strong></p>
+          <p>P. IVA: 12871260019</p>
+          <p>Italy</p>
+          <p><a href="https://www.mafesitech.com" target="_blank">www.mafesitech.com</a></p>
+        </div>
+        <div class="footer-section">
+          <h3>Contact</h3>
+          <p><a href="mailto:amministrazione@mafesitech.com">amministrazione@mafesitech.com</a></p>
+        </div>
+        <div class="footer-section">
+          <h3>Legal</h3>
+          <p><a href="privacy-policy.html">Privacy Policy</a></p>
+          <p><a href="cookie-policy.html">Cookie Policy</a></p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 Mafesi Tech Srls. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <!-- Cookie Consent Banner -->
+    <div class="cookie-consent" id="cookieConsent">
+      <div class="cookie-message">
+        <strong>Cookie Consent</strong><br>
+        We use cookies to enhance your experience. By continuing to browse, you agree to our use of cookies. Learn more in our <a href="cookie-policy.html">Cookie Policy</a>.
+      </div>
+      <div class="cookie-buttons">
+        <button class="cookie-btn cookie-btn-reject" id="cookieReject">Reject</button>
+        <button class="cookie-btn cookie-btn-accept" id="cookieAccept">Accept</button>
+      </div>
+    </div>
+
+    <script>
+      // Cookie Consent Management
+      const cookieConsent = document.getElementById('cookieConsent');
+      const cookieAccept = document.getElementById('cookieAccept');
+      const cookieReject = document.getElementById('cookieReject');
+
+      // Check if user has already made a choice
+      function initCookieConsent() {
+        const consentStatus = localStorage.getItem('cookieConsent');
+        
+        // Show banner only if no prior consent
+        if (!consentStatus) {
+          cookieConsent.classList.add('show');
+        } else if (consentStatus === 'accepted') {
+          // Analytics are already enabled in gtag.js
+        } else if (consentStatus === 'rejected') {
+          // User rejected cookies
+          window['ga-disable-G-ES26YFY05Z'] = true;
+        }
+      }
+
+      // Accept cookies
+      cookieAccept.addEventListener('click', function() {
+        localStorage.setItem('cookieConsent', 'accepted');
+        cookieConsent.classList.remove('show');
+        // Enable Google Analytics if it was disabled
+        window['ga-disable-G-ES26YFY05Z'] = false;
+        // Track accept event
+        gtag('event', 'cookie_consent', {
+          'consent_type': 'all',
+          'status': 'accepted'
+        });
+      });
+
+      // Reject cookies
+      cookieReject.addEventListener('click', function() {
+        // Track reject event BEFORE disabling analytics
+        gtag('event', 'cookie_consent', {
+          'consent_type': 'all',
+          'status': 'rejected'
+        });
+        localStorage.setItem('cookieConsent', 'rejected');
+        cookieConsent.classList.remove('show');
+        // Disable Google Analytics
+        window['ga-disable-G-ES26YFY05Z'] = true;
+      });
+
+      // Initialize on page load
+      document.addEventListener('DOMContentLoaded', initCookieConsent);
+      // Also run immediately in case DOM is already loaded
+      if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', initCookieConsent);
+      } else {
+        initCookieConsent();
+      }
+    </script>
   </div>
 </body>
 </html>
