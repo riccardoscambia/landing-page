@@ -82,12 +82,6 @@
     window.dataLayer = window.dataLayer || [];
     function gtag() { dataLayer.push(arguments); }
     gtag("js", new Date());
-    gtag("consent", "default", {
-      ad_storage: "denied",
-      analytics_storage: "denied",
-      ad_user_data: "denied",
-      ad_personalization: "denied"
-    });
     gtag("config", "G-ES26YFY05Z", { anonymize_ip: true });
   </script>
   <!-- Google AdSense -->
@@ -155,71 +149,6 @@
         <p>&copy; 2026 Mafesi Tech Srls. All rights reserved.</p>
       </div>
     </footer>
-
-    <!-- Cookie Consent Banner -->
-    <div class="cookie-consent" id="cookieConsent">
-      <div class="cookie-message">
-        <strong>Cookie Consent</strong><br>
-        We use cookies to enhance your experience. By continuing to browse, you agree to our use of cookies. Learn more in our <a href="cookie-policy.html">Cookie Policy</a>.
-      </div>
-      <div class="cookie-buttons">
-        <button class="cookie-btn cookie-btn-reject" id="cookieReject">Reject</button>
-        <button class="cookie-btn cookie-btn-accept" id="cookieAccept">Accept</button>
-      </div>
-    </div>
-
-    <script>
-      // Cookie consent management
-      const cookieConsent = document.getElementById('cookieConsent');
-      const cookieAccept = document.getElementById('cookieAccept');
-      const cookieReject = document.getElementById('cookieReject');
-      const consentMeasurementId = 'G-ES26YFY05Z';
-      const gaDisableKey = `ga-disable-${consentMeasurementId}`;
-
-      function updateAnalyticsConsent(granted) {
-        window[gaDisableKey] = !granted;
-        gtag('consent', 'update', {
-          ad_storage: granted ? 'granted' : 'denied',
-          analytics_storage: granted ? 'granted' : 'denied',
-          ad_user_data: granted ? 'granted' : 'denied',
-          ad_personalization: granted ? 'granted' : 'denied'
-        });
-      }
-
-      function initCookieConsent() {
-        const consentStatus = localStorage.getItem('cookieConsent');
-
-        if (!consentStatus) {
-          cookieConsent.classList.add('show');
-          updateAnalyticsConsent(false);
-          return;
-        }
-
-        updateAnalyticsConsent(consentStatus === 'accepted');
-      }
-
-      cookieAccept.addEventListener('click', function() {
-        localStorage.setItem('cookieConsent', 'accepted');
-        cookieConsent.classList.remove('show');
-        updateAnalyticsConsent(true);
-        gtag('event', 'cookie_consent', {
-          'consent_type': 'all',
-          'status': 'accepted'
-        });
-      });
-
-      cookieReject.addEventListener('click', function() {
-        localStorage.setItem('cookieConsent', 'rejected');
-        cookieConsent.classList.remove('show');
-        updateAnalyticsConsent(false);
-      });
-
-      if (document.readyState === 'loading') {
-        document.addEventListener('DOMContentLoaded', initCookieConsent);
-      } else {
-        initCookieConsent();
-      }
-    </script>
   </div>
 </body>
 </html>
