@@ -1,0 +1,335 @@
+:root {
+  --bg-base: #111015;
+  --bg-top: #2a2130;
+  --surface: rgba(22, 20, 28, 0.78);
+  --surface-strong: rgba(17, 15, 22, 0.9);
+  --text-main: #f9f4ea;
+  --text-muted: #d7cdbb;
+  --accent: #d7a861;
+  --accent-soft: rgba(215, 168, 97, 0.2);
+  --line: rgba(255, 255, 255, 0.14);
+  --radius: 18px;
+  --container: 960px;
+  --shadow: 0 22px 54px rgba(0, 0, 0, 0.38);
+  --font-title: "Cormorant Garamond", serif;
+  --font-body: "Montserrat", sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  min-height: 100%;
+}
+
+body {
+  font-family: var(--font-body);
+  color: var(--text-main);
+  background:
+    radial-gradient(circle at 12% 16%, rgba(215, 168, 97, 0.2), transparent 38%),
+    radial-gradient(circle at 88% 10%, rgba(173, 93, 66, 0.26), transparent 42%),
+    linear-gradient(170deg, var(--bg-top), var(--bg-base) 46%);
+  line-height: 1.7;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  background-image: repeating-linear-gradient(
+    120deg,
+    rgba(255, 255, 255, 0.03) 0,
+    rgba(255, 255, 255, 0.03) 1px,
+    transparent 1px,
+    transparent 34px
+  );
+  opacity: 0.32;
+  z-index: -1;
+}
+
+.page {
+  width: min(100% - 2rem, var(--container));
+  margin: 0 auto;
+  padding: 2rem 0 3rem;
+}
+
+.back-link {
+  display: inline-block;
+  margin-bottom: 1.5rem;
+  color: var(--text-main);
+  text-decoration: none;
+  border-bottom: 1px solid var(--accent-soft);
+  padding-bottom: 0.12rem;
+  font-size: 0.9rem;
+  transition: color 0.2s ease, border-color 0.2s ease;
+}
+
+.back-link:hover {
+  color: #ffe5bf;
+  border-color: var(--accent);
+}
+
+.hero {
+  padding: clamp(2rem, 4.5vw, 3.2rem);
+  border-radius: 24px;
+  background:
+    radial-gradient(circle at 96% -18%, rgba(215, 168, 97, 0.42) 0%, rgba(215, 168, 97, 0.18) 28%, rgba(215, 168, 97, 0) 58%),
+    linear-gradient(130deg, var(--surface), var(--surface-strong));
+  border: 1px solid var(--line);
+  box-shadow: var(--shadow);
+}
+
+.eyebrow {
+  margin: 0;
+  color: var(--accent);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+h1 {
+  margin: 0.6rem 0 0;
+  font-family: var(--font-title);
+  font-size: clamp(2rem, 5.2vw, 3.6rem);
+  line-height: 1.08;
+  text-wrap: balance;
+}
+
+.lede {
+  margin: 1rem 0 0;
+  max-width: 68ch;
+  color: var(--text-muted);
+  text-wrap: pretty;
+}
+
+.page-meta {
+  margin: 0.8rem 0 0;
+  font-size: 0.86rem;
+  color: #e8d9bf;
+}
+
+.mini-nav {
+  margin-top: 1.2rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.7rem;
+}
+
+.mini-nav a {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  color: var(--text-main);
+  text-decoration: none;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  padding: 0.44rem 0.82rem;
+  font-size: 0.82rem;
+  transition: border-color 0.2s ease, color 0.2s ease, transform 0.2s ease;
+}
+
+.mini-nav a:hover {
+  border-color: var(--accent);
+  color: #ffe5bf;
+  transform: translateY(-1px);
+}
+
+.mini-nav a.active {
+  border-color: rgba(215, 168, 97, 0.62);
+  color: #ffe5bf;
+  background: rgba(215, 168, 97, 0.12);
+}
+
+.content {
+  margin-top: 1.4rem;
+  display: grid;
+  gap: 1rem;
+}
+
+.panel {
+  background: rgba(20, 18, 26, 0.84);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 1.25rem;
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.32);
+}
+
+.panel h2 {
+  margin: 0 0 0.6rem;
+  font-family: var(--font-title);
+  font-size: clamp(1.35rem, 2.8vw, 1.95rem);
+  color: var(--accent);
+}
+
+.panel h3 {
+  margin: 1.25rem 0 0.35rem;
+  font-size: 1rem;
+  color: var(--text-main);
+}
+
+.panel p {
+  margin: 0.65rem 0;
+  color: var(--text-muted);
+}
+
+.panel ul {
+  margin: 0.7rem 0;
+  padding-left: 1.1rem;
+  color: var(--text-muted);
+}
+
+.panel li {
+  margin: 0.45rem 0;
+}
+
+.timeline {
+  margin: 0.9rem 0 0;
+  display: grid;
+  gap: 0.8rem;
+}
+
+.timeline-item {
+  border: 1px solid rgba(215, 168, 97, 0.28);
+  border-radius: 12px;
+  padding: 0.9rem;
+  background: rgba(14, 12, 18, 0.44);
+}
+
+.timeline-item h3 {
+  margin-top: 0;
+  color: #f6ddae;
+}
+
+.analysis-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.9rem;
+  margin-top: 0.8rem;
+}
+
+.analysis-card {
+  border: 1px solid rgba(215, 168, 97, 0.24);
+  border-radius: 12px;
+  padding: 0.95rem;
+  background: rgba(14, 12, 18, 0.44);
+}
+
+.analysis-card h3 {
+  margin-top: 0;
+  color: #f6ddae;
+}
+
+.update-list {
+  margin-top: 0.8rem;
+  display: grid;
+  gap: 0.8rem;
+}
+
+.update-item {
+  border: 1px solid rgba(215, 168, 97, 0.24);
+  border-radius: 12px;
+  padding: 0.9rem;
+  background: rgba(14, 12, 18, 0.44);
+}
+
+.update-date {
+  margin: 0;
+  color: #f3d8a8;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  font-size: 0.72rem;
+  font-weight: 600;
+}
+
+.update-item h3 {
+  margin: 0.45rem 0 0;
+  color: var(--text-main);
+  font-size: 1.03rem;
+}
+
+.update-item p {
+  margin: 0.45rem 0 0;
+}
+
+.disclosure {
+  border-left: 3px solid rgba(215, 168, 97, 0.6);
+}
+
+a {
+  color: var(--text-main);
+  text-decoration: none;
+  border-bottom: 1px solid var(--accent-soft);
+  transition: color 0.2s ease, border-color 0.2s ease;
+}
+
+a:hover {
+  color: #ffe5bf;
+  border-color: var(--accent);
+}
+
+footer {
+  margin-top: 2.6rem;
+  padding-top: 2rem;
+  border-top: 1px solid var(--line);
+}
+
+.footer-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 2rem;
+  margin-bottom: 2rem;
+  padding: 0 1rem;
+  text-align: center;
+}
+
+.footer-section h4 {
+  margin: 0 0 1rem;
+  font-family: var(--font-title);
+  font-size: 1.1rem;
+  color: var(--accent);
+  font-weight: 600;
+}
+
+.footer-section p {
+  margin: 0.5rem 0;
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  line-height: 1.6;
+}
+
+.footer-section a {
+  font-size: 0.85rem;
+}
+
+.footer-bottom {
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--line);
+  text-align: center;
+  font-size: 0.8rem;
+  color: rgba(250, 236, 205, 0.68);
+}
+
+@media (max-width: 760px) {
+  .page {
+    width: min(100% - 1.4rem, var(--container));
+  }
+
+  .mini-nav {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  .analysis-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .footer-content {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+}
