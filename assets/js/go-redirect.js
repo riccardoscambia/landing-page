@@ -19,6 +19,7 @@
       if (!url.searchParams.has("utm_content")) url.searchParams.set("utm_content", slug);
       return url.toString();
     } catch (err) {
+      console.error("Error building tracked URL:", err);
       return rawUrl;
     }
   }
@@ -27,6 +28,7 @@
     try {
       return new URL(urlString).hostname;
     } catch (err) {
+      console.error("Error extracting domain:", err);
       return "";
     }
   }
@@ -42,7 +44,14 @@
   }
 
   function goNow() {
-    window.location.replace(trackedTarget);
+    try {
+      window.location.replace(trackedTarget);
+    } catch (err) {
+      console.error("Error redirecting:", err);
+      if (fallbackLink) {
+        fallbackLink.click();
+      }
+    }
   }
 
   if (typeof window.gtag !== "function") {
@@ -70,9 +79,10 @@
       event_callback: safeRedirect
     });
   } catch (err) {
+    console.error("Error sending gtag event:", err);
     safeRedirect();
     return;
   }
 
-  window.setTimeout(safeRedirect, 900);
+  window.setTimeout(safeRedirect, 1500);
 })();
