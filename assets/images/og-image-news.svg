@@ -1,0 +1,51 @@
+<svg width="1200" height="630" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background gradient -->
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#2a2130;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#111015;stop-opacity:1" />
+    </linearGradient>
+    <radialGradient id="accentGlow" cx="50%" cy="50%">
+      <stop offset="0%" style="stop-color:#d7a861;stop-opacity:0.28" />
+      <stop offset="50%" style="stop-color:#d7a861;stop-opacity:0.12" />
+      <stop offset="100%" style="stop-color:#d7a861;stop-opacity:0" />
+    </radialGradient>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="1200" height="630" fill="url(#bgGrad)"/>
+  <circle cx="600" cy="315" r="400" fill="url(#accentGlow)"/>
+  
+  <!-- Decorative grid pattern -->
+  <line x1="100" y1="140" x2="1100" y2="140" stroke="#d7a861" stroke-width="1" opacity="0.2"/>
+  <line x1="100" y1="520" x2="1100" y2="520" stroke="#d7a861" stroke-width="1" opacity="0.2"/>
+  <rect x="950" y="160" width="120" height="3" fill="#d7a861" opacity="0.5"/>
+  
+  <!-- Text content -->
+  <text x="100" y="210" font-family="Georgia, serif" font-size="26" fill="#d7a861" letter-spacing="3">
+    KHLOE GRACE EDITORIAL SERIES
+  </text>
+  
+  <text x="100" y="310" font-family="Georgia, serif" font-size="78" font-weight="bold" fill="#f9f4ea">
+    News &amp; Updates
+  </text>
+  
+  <text x="100" y="400" font-family="Arial, sans-serif" font-size="34" fill="#d7cdbb" opacity="0.9">
+    Site changes, coverage plans, editorial notes,
+  </text>
+  
+  <text x="100" y="450" font-family="Arial, sans-serif" font-size="34" fill="#d7cdbb" opacity="0.9">
+    and transparency-focused correction workflow
+  </text>
+  
+  <!-- Date indicator -->
+  <rect x="100" y="160" width="140" height="40" rx="6" fill="none" stroke="#d7a861" stroke-width="2" opacity="0.6"/>
+  <text x="170" y="188" font-family="Arial, sans-serif" font-size="18" fill="#d7a861" text-anchor="middle" opacity="0.8">
+    UPDATED
+  </text>
+  
+  <!-- Footer -->
+  <text x="1050" y="570" font-family="Arial, sans-serif" font-size="20" fill="#d7a861" text-anchor="end" opacity="0.8">
+    KhloeGrace.com
+  </text>
+</svg>

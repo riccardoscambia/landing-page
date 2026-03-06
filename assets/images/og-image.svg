@@ -1,0 +1,43 @@
+<svg width="1200" height="630" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background gradient -->
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#2a2130;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#111015;stop-opacity:1" />
+    </linearGradient>
+    <radialGradient id="accentGlow" cx="20%" cy="30%">
+      <stop offset="0%" style="stop-color:#d7a861;stop-opacity:0.3" />
+      <stop offset="50%" style="stop-color:#d7a861;stop-opacity:0.1" />
+      <stop offset="100%" style="stop-color:#d7a861;stop-opacity:0" />
+    </radialGradient>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="1200" height="630" fill="url(#bgGrad)"/>
+  <circle cx="240" cy="189" r="300" fill="url(#accentGlow)"/>
+  
+  <!-- Decorative line -->
+  <line x1="100" y1="500" x2="400" y2="500" stroke="#d7a861" stroke-width="2" opacity="0.6"/>
+  
+  <!-- Text content -->
+  <text x="100" y="180" font-family="Georgia, serif" font-size="28" fill="#d7a861" letter-spacing="3" opacity="0.9">
+    EDITORIAL HUB
+  </text>
+  
+  <text x="100" y="280" font-family="Georgia, serif" font-size="72" font-weight="bold" fill="#f9f4ea">
+    KhloeGrace.com
+  </text>
+  
+  <text x="100" y="350" font-family="Arial, sans-serif" font-size="32" fill="#d7cdbb" opacity="0.9">
+    Biography • American Idol • Vocal Style • Updates
+  </text>
+  
+  <text x="100" y="430" font-family="Arial, sans-serif" font-size="24" fill="#d7cdbb" opacity="0.7">
+    Independent editorial coverage of singer Khloe Grace
+  </text>
+  
+  <!-- Footer branding -->
+  <text x="1050" y="590" font-family="Arial, sans-serif" font-size="18" fill="#d7a861" text-anchor="end" opacity="0.8">
+    khloegrace.com
+  </text>
+</svg>
